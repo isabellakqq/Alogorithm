@@ -1,5 +1,5 @@
 class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
+    def sortArray(self, nums):
         
         '''
         Physical meaning： array ->可以 o(1)time  find l and r child
