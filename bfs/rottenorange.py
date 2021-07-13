@@ -1,9 +1,8 @@
-from collections import deque()
+from collections import deque
 def rottingOranges(self, grid):
     '''
     多源点bfs把所有烂橘子都放到队列里作为源点进行bfs
-    因为题目问的是 1 到任意一个 0 的最短距离，但你并不知道具体是到哪个 0，
-    所以，你会把所有 9 丢进队列作为源点做 BFS，每遇到一个 1，就得到了那个 1 到任意一个 0 的最短路径
+    
     '''
     if not grid or not grid[0]:
         return 0
