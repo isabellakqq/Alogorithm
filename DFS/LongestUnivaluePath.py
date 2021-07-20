@@ -45,8 +45,6 @@ return 0                                       ...
             pr = r + 1
         res[0] = max(res[0], pl + pr)
         return max(pl, pr)
-        
-        
-            
-            
-       
+s = Solution()
+lp = s.longestUnivaluePath(root= 5)
+print(lp)
