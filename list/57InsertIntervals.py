@@ -14,7 +14,7 @@ def insertIntervals(intervals, newInterval):
       break
   intervals.insert(index, newInterval)
   res = []
-  for interval in sorted(intervals):
+  for interval in intervals:
       if not res or interval[0] > res[-1][1]:
           res.append(interval)
       else:
