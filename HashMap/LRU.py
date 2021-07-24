@@ -1,6 +1,7 @@
 class Node:
     '''
-    head -> node1->node2 ->node3 ...->tail
+    doublue LinkedList
+    head <-> node1<->node2 <->node3 ...<->tail
     head.next 是Least Recently Used (LRU) cache. tail.pre是recently used
     '''
     def __init__(self, k, v) -> None:
