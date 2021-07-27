@@ -1,4 +1,8 @@
 class MyHashMap:
+    '''
+    hashMap 两种方法都是常见的 hash 冲突解决方案:chaining and open addressing
+    rehash expand扩容就是为了 rehashing，降低 hash colision
+    '''
 
     def __init__(self):
         """
