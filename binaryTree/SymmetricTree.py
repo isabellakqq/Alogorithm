@@ -30,7 +30,7 @@ class Solution:
 
     def isIdentical(self, node1, node2):
         #base case1
-        if not node1 and node2:
+        if not node1 and not node2:
             return True
         #base case2
         if not node1 or not node2:

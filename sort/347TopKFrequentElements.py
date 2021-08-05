@@ -1,4 +1,5 @@
 import collections
+from typing import List
 def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         # if len(nums) < k or len(nums) == 1:
         #     return nums

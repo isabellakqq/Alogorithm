@@ -7,7 +7,7 @@ class Solution:
 #             print(res)
 #         return res.values()
     #优化的时间复杂度：nl（就是不sort而是26个字母减ord('a')
-    def groupAnagrams(self, strs:list[str]):
+    def groupAnagrams(self, strs):
         d = {}
         if not strs:
             return None

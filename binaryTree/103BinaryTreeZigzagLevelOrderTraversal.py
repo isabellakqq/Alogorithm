@@ -5,6 +5,7 @@ class TreeNode:
         self.left = left
         self.right = right
 import collections
+from typing import List
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         res = []

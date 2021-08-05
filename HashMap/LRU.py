@@ -3,6 +3,7 @@ class Node:
     doublue LinkedList
     head <-> node1<->node2 <->node3 ...<->tail
     head.next 是Least Recently Used (LRU) cache. tail.pre是recently used
+    为了维护尾节点是最recently used，先把这个节点在dl里删了然后_add到tail.pre
     '''
     def __init__(self, k, v) -> None:
         self.key = k

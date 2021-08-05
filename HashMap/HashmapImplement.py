@@ -2,6 +2,12 @@ class MyHashMap:
     '''
     hashMap 两种方法都是常见的 hash 冲突解决方案:chaining and open addressing
     rehash expand扩容就是为了 rehashing，降低 hash colision
+    开2的N次幂的固定空间
+    每个index对应一个linklist的头节点索引
+    filed: buckets, size, load_factor
+    API:put, get, remove, expand
+    注意细节：每次put插入在linklist头部，并更新bukets对应的头节点索引， size ++ 如果size >= 0.75n expand
+            删除需要dummy索引记录头节点
     '''
 
     def __init__(self):

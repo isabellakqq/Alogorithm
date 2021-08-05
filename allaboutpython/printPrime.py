@@ -1,4 +1,3 @@
-
 n = int(input())
 for i in range(2, n + 1): # 使用for循环遍历区间[2,n]
     isPrime = True
