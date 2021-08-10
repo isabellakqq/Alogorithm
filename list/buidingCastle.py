@@ -1,7 +1,7 @@
 
 '''
 A = [2, 2, 3, 4, 3, 3, 2, 2, 1, 1, 2, 5]
- 
+in this example there are 2 valleys2, 1  and two peaks 4, 5
         /
     __
    /
