@@ -31,18 +31,30 @@ class Solution:
     space(N)
     '''
     def letterCombinations(self, digits: str) -> List[str]:
-        if not digits:
-            return []
         res = []
-        self.dfs(digits, 0, [], res)
+        if not digits:
+            return res
+        PHONE = {
+            '2' : 'abc',
+            '3' : 'def',
+            '4' : 'ghi',
+            '5' : 'jkl',
+            '6' : 'mno',
+            '7' : 'pqrs',
+            '8' : 'tuv',
+            '9' : 'wxyz'
+        }
+        self.dfs(digits, 0, PHONE, [], res)
         return res
-    def dfs(self, digits, start, combination, res):
-        if start == len(digits):
-            res.append(''.join(combination))
+    
+    def dfs(self, digits, index, PHONE, path, res):
+        if index == len(digits):
+            res.append(''.join(path))
             return 
-       
-        for ch in phone[digits[start]]:
-            combination.append(ch)
-            self.dfs(digits, start + 1, combination, res)
-            combination.pop()
-
+        letters = PHONE[digits[index]]
+        for i in range(len(letters)):
+            path.append(letters[i])
+            self.dfs(digits, index + 1, PHONE, path, res)
+            path.pop()
+            
+            
