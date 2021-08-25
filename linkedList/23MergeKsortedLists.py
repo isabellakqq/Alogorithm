@@ -9,20 +9,25 @@ class Solution:
         dummy = ListNode(0)
         cur = dummy
         q = [] 
-        for node in lists:
-            if node:
-                heapq.heappush(q, (node.val, node))
+        for head in lists:
+            if head:
+                heapq.heappush(q, head)
                
         while q:
-            val, ln = heapq.heappop(q)
-            cur.next = ListNode(val)
+            node = heapq.heappop(q)
+            cur.next = node
             cur = cur.next
-            ln = ln.next
-            if ln:
-                heapq.heappush(q, (ln.val, ln))
+            node = node.next
+            if node:
+                heapq.heappush(q, node)
             
         return dummy.next
 s = Solution()
-node = ListNode(1, ListNode(2, ListNode(3, None)))
-node2 = ListNode(2, ListNode(4, None))
-print(s.mergeK([node,node2]))
+node = ListNode(1)
+node.next = ListNode(4)
+node2 = ListNode(3)
+node2.next = None
+head3 = s.mergeK([node,node2])
+while head3:
+    print(head3.val)
+    head3 = head3.next
