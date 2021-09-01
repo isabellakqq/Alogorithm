@@ -5,8 +5,9 @@ class Employee:
     and if it doesn't the it will see if the calss and the class 
     inherits from contains that attibute so when we access 
     '''
-    raise_amount = 1.04
-    num_of_emps = 0
+    raise_amount = 1.04 
+    num_of_emps = 0 #class variable
+    
     def __init__(self, first, last, pay) -> None:
         self.first = first
         self.last = last

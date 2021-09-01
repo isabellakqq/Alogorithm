@@ -49,3 +49,5 @@ emp_str_3 = 'Jane-Doe_90000'
 new_emp_1 = Employee.from_str(emp_str_1)
 print(new_emp_1.pay)
 print(new_emp_1.email)
+
+print(max(4, 5))

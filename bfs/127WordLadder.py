@@ -21,7 +21,7 @@ class Solution:
                 distance[neighbor] = distance[cur] + 1
                 q.append(neighbor)
         return 0
-        
+    # O(25*L^2 ) string immutable
     def get_next_word(self, word):
         res = []
         for i in range(len(word)):
