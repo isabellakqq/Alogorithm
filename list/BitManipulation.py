@@ -11,13 +11,13 @@ def find_single(l):
     for n in l:
         a ^= n
     return a
-# arr = [1,2,3,3,1]
-# print(find_single(arr))
+arr = [1,2,3,3,1]
+print(find_single(arr))
 
 def find_missing_number(A):
     missing_num = len(A)
     for i, n in enumerate(A):
         missing_num ^= i ^ n
     return missing_num
-arr2 = [1, 2, 3, 4]
-print(find_missing_number(arr2))
+# arr2 = [1, 2, 3, 4]
+# print(find_missing_number(arr2))
