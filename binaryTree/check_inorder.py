@@ -33,7 +33,7 @@ t2.right.right = TreeNode(7)
 #             push_left(node1.right, stack1)
 #         if node2.right:
 #             push_left(node2.right, stack2)
-#     return True
+#     return not stack1 and not stack2
                 
 # def push_left(node, stack):
 #     while node:
