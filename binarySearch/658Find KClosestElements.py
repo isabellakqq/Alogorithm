@@ -17,5 +17,6 @@ def is_left_closer(arr, left, right, x):
         return False
     return abs(arr[left] - x) <= abs(arr[right] - x)
 
-print(findClosestelement([1, 2, 3, 4, 5], 2, 0))
+# print(findClosestelement([1, 2, 3, 4, 5], 2, 0))
+print(bisect.bisect([1, 2, 3, 3, 5], 1))
 
