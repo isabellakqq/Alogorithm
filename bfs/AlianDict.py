@@ -4,11 +4,10 @@ class Solution:
         indegree = {}
         graph = collections.defaultdict(set)
         n = len(words)
-        # build graph
-        for i in range(n):
-            for j in range(i + 1, n):
-                if not self.build(words[i], words[j], graph):
-                    return ''
+        # build graph (n * m) m =len(string), n = len(words)
+        for i in range(n-1):
+            if not self.build(words[i], words[i + 1], graph):
+                return ''
         
         # initialize indegree
         for w in words:
@@ -16,9 +15,11 @@ class Solution:
                 indegree[ch] = 0
                 
         # update indegree
+        # for k , v in hashmap.items()
         for node, neighbor in graph.items():
             for n in neighbor:
                 indegree[n] += 1
+
         # topological sort
         start_nodes = [n for n in indegree if indegree[n] == 0]
         q = collections.deque(start_nodes)
@@ -41,7 +42,7 @@ class Solution:
         while i < len(str1) and j < len(str2):
             if str1[i] != str2[j]:
                 graph[str1[i]].add(str2[j])
-                return True
+                return True # aba ab
             i += 1
             j += 1
             
@@ -49,5 +50,5 @@ class Solution:
             return False
         return True
 s = Solution()
-test = s.alienOrder(["wrt","wrf","er","ett","rftt"])
+test = s.alienOrder(['ba', 'ba'])
 print(test)

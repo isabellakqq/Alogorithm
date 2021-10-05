@@ -17,6 +17,8 @@ def quickSort(arr, left, right):
             j -= 1
         if i <= j:
             arr[i], arr[j] = arr[j], arr[i]
+            i += 1
+            j -= 1
     quickSort(arr, left, j)
     quickSort(arr, i, right)
 
