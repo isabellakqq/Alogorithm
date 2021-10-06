@@ -46,6 +46,7 @@ t.insert('alle')
 t.insert('app')  
 print(t.search('app'))
 print(t.startsWith('all'))
+print(ord('.') - ord('a'))
         
 
 
