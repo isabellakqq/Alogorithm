@@ -2,6 +2,11 @@ class Solution:
     def sortArray(self, nums):
         
         '''
+        dfs(arr, index):
+            return : root is reference of TreeNode
+            recursion way 
+            
+
         Physical meaning： array ->可以 o(1)time  find l and r child
             index 0 1 2 3 4 
             value 2 3 7 5 4
