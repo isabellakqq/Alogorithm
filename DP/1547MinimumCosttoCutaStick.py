@@ -2,7 +2,6 @@ class Solution:
     def minCost(self, n: int, cuts):
         cuts.sort()
         cuts_list = [0, *cuts, n]
-        print(n)
         m = len(cuts_list)
         dp = [[float('inf')] * m for _ in range(m)]
         for i in range(m):
