@@ -15,7 +15,7 @@ class BinarySearch:
         low = 0
         high = n - 1
         # If it can not be found, must be the first element (wrap around)
-        result = 0 
+        result = n
         
         while low <= high:
             mid = low + (high-low) // 2
@@ -24,6 +24,7 @@ class BinarySearch:
                 high = mid - 1
             else:
                 low = mid + 1
-        return letters[result]
+        return letters[result] if result != n else -1
+    
     
         
