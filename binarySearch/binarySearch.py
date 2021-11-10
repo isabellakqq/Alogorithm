@@ -14,7 +14,7 @@ class BinarySearch:
         
         low = 0
         high = n - 1
-        # If it can not be found, must be the first element (wrap around)
+        # If it can not be found, 有可能是0， 或者n，初始化为n是因为在大于target的时候会被修改
         result = n
         
         while low <= high:

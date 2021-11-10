@@ -32,6 +32,7 @@ def quick_select(arr, id):
             right = j
         # 所以 i < k < j才能确定 arr[k] == pivot 
         else:
+            # 最后一次的pivot == arr[k]
             return pivot
         
 arr = [9, 7, 4, 5, 8]

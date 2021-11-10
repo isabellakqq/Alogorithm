@@ -15,10 +15,11 @@
             return 1
         left = 2
         right = x // 2
-        while left + 1 < right:
+        while left < right:
             mid = (left + right) // 2
             if mid * mid > x:
                 right = mid 
             else:
+                res = mid
                 left = mid
-        return left
+        return res

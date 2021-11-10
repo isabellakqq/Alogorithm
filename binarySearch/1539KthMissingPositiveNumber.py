@@ -3,6 +3,9 @@
 5
 find 5th missing num
 小于答案的最大index
+find < res 的最后一个index
+---m--m---m---index res index + 1-----
+
 '''
 def find_kth_missing(arr, k):
     left = 0
