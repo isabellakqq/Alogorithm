@@ -31,6 +31,45 @@ def sortColors(nums: List[int]) -> None:
 arr = [0, 1, 2, 1, 0, 2]
 sortColors(arr)
 print(arr)
+'''
+10/10/2021
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        i,j k three way patition
+        
+        i: represents all element before i(excluding i) are 0
+        j: represents all element before i(exluding j) are 1
+        k: cur index to scan whole arr [i, k) are 1, [k, j] are element to be processing
+        [0,0,1,1,2,2]
+         0 1 2 3 4 5
+             i
+                  k
+                j
+        
+        
+        """
+        i = 0
+        j = len(nums) - 1
+        k = 0
+        
+        while k <= j:
             
+            if nums[k] == 0:
+                nums[k], nums[i] = nums[i], nums[k]
+                i += 1
+                k += 1
+            elif nums[k] == 1:
+                k += 1
+                
+            else:
+                nums[j], nums[k] = nums[k], nums[j]
+                j -= 1
+                
+            
+            
+        
+'''
         
         
