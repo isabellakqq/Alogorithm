@@ -27,6 +27,7 @@ class Solution:
             node2 = head.next
             
             # swap
+            #易错： pre
             pre.next = node2
             
             node1.next = node2.next
@@ -39,19 +40,24 @@ class Solution:
             head = node1.next
             
         return dummy.next
+
+# recursion写法     
         
-        
-        
-        
+# class Solution:
+#     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+#         '''
+#         adjacent: if not head or not head.next:return head
+#         swap pair by pair
+#         '''
 #         if not head or not head.next:
 #             return head
         
-#         first_node = head
-#         second_node = head.next
+#         cur = head
+#         nt = head.next
         
-#         first_node.next = self.swapPairs(second_node.next)
+#         tmp = self.swapPairs(nt.next)
         
-#         second_node.next = first_node
+#         nt.next = cur
+#         cur.next = tmp
         
-#         return second_node
-        
+#         return nt
