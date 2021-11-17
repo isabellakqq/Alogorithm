@@ -35,11 +35,12 @@ class Solution:
         res = -1
         while left <= right:
             mid = (left + right) // 2
-            if nums[mid] == target:
-                res = mid
-                left = mid + 1
+            # if nums[mid] == target:
+            #     res = mid
+            #     left = mid + 1
                 
-            elif nums[mid] < target:
+            if nums[mid] <= target:
+                res = mid
                 left = mid + 1
                 
             else:
