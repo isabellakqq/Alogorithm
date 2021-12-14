@@ -48,12 +48,13 @@ def collect_valid(k, arr, res):
     arr.sort(key = lambda x : int(x))
     start = 0
     n = len(arr)
-
+    # slidingwindow一般求最长或者最短，固定end去找最大的start 的，然后枚举所有index作为可能的end， 没有漏掉所有的可能性
     for end in range(n):
         
         while parse(arr[end]) - parse(arr[start]) > 60:
             start += 1
         if end - start + 1 >= 3:
+            # 满足条件找最长的
             while end < n and parse(arr[end]) - parse(arr[start]) <= 60:
                 end += 1
             res[k] = arr[start : end]
@@ -66,15 +67,7 @@ def parse(s):
         return int(s[0]) * 60 + int(s[1:3])
     if len(s) == 4:
         return int(s[:2]) * 60 + int(s[2:4])
-# def parse_back(num):
-#     if num < 60:
-#         return str(num)
-#     else:
-#         hh = str(num // 60)
-#         mm = str(num % 60)
-#         if len(mm) == 1:
-#             mm = '0' + mm
-#         return hh + mm
+
 badge_times = [
   ["Paul",      "1355"], ["Jennifer",  "1910"], ["Jose",    "835"],
   ["Jose",       "830"], ["Paul",      "1315"], ["Chloe",     "0"],

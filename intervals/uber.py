@@ -57,7 +57,7 @@ def cnt_intervals(trips):
       
         cnt += arr[i][1]
     return res
-trips = [[0, 5],[1, 2],[3, 7]]
+trips = [[0, 5],[1, 2],[3, 7],[1, 2]]
 print(cnt_intervals(trips))
 
         
