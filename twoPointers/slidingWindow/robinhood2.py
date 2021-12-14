@@ -48,13 +48,14 @@ def collect_valid(k, arr, res):
     arr.sort(key = lambda x : int(x))
     start = 0
     n = len(arr)
-    # slidingwindow一般求最长或者最短，固定end去找最大的start 的，然后枚举所有index作为可能的end， 没有漏掉所有的可能性
+    # slidingwindow一般求最长或者最短，固定end去找最大的start的，然后枚举所有index作为可能的end， 没有漏掉所有的可能性
+    # update hashset/map
     for end in range(n):
         
         while parse(arr[end]) - parse(arr[start]) > 60:
             start += 1
         if end - start + 1 >= 3:
-            # 满足条件找最长的
+            # 满足条件找最长的最早的
             while end < n and parse(arr[end]) - parse(arr[start]) <= 60:
                 end += 1
             res[k] = arr[start : end]

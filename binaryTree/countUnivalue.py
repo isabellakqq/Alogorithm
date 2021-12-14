@@ -1,5 +1,4 @@
-from class import TreeNode
-def countUnivalSubtrees(self, root: TreeNode) -> int:
+def countUnivalSubtrees(self, root) -> int:
     if not root:
         return 0
     cnt = [0]

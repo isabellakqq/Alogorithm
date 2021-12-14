@@ -39,10 +39,7 @@ def find_people(badge_times):
     d = collections.defaultdict(list)
     for name, time in badge_times:
         d[name].append(time)
-    
-    
     res = {}
-
     for k, v in d.items():
         if len(v) >= 3:
             collect_res(k, v, res)
@@ -50,11 +47,11 @@ def find_people(badge_times):
 
 
 def collect_res(k, v, res):
+    # 忘记sort了
     v.sort(key = lambda x : int(x))
     i = 0
     n = len(v)
-    j = 0
-    while j < n:
+    for j in range(n):
         # invalid move i
         while int(v[j]) - int(v[i]) > 100:
             i += 1
@@ -65,8 +62,7 @@ def collect_res(k, v, res):
                 j += 1
             res[k] = v[i : j]
             break
-        j += 1
-
+        
     
 
 

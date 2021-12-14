@@ -49,8 +49,6 @@ def cnt_intervals(trips):
         
         if arr[i][0] == arr[i - 1][0]:
             continue
-            
-
         else:
             res.append((pre_start, arr[i][0], cnt))
             pre_start = arr[i][0]

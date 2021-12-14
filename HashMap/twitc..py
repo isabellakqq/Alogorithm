@@ -7,7 +7,7 @@ ouput: ['twitch' : 3]
         ['hello' : 2]
         ['Isa' : 1]
 
-print out by deseding order
+
 
 '''
 

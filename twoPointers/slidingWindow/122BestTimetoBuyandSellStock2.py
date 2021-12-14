@@ -14,7 +14,9 @@ def maxProfit(prices) -> int:
     peak = prices[0]
     maxprofit = 0
     while i < n - 1:
-        
+        # while 满足条件 一定要加上最外层的while条件
+        # i不一定更新多少所以不适合forloop
+        # 用while的时候前面越界判断
         while i < n - 1 and prices[i] >= prices[i + 1]:
             i += 1
         valley = prices[i]

@@ -39,29 +39,16 @@ space: O(1)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def get_maxchar(s):
+    # 这个模板的意义：固定了end 找最大的start在哪里
     start = 0
     max_lens = 0
     res = ''
     for end in range(len(s)):
-
+        # 不符合条件往后移动start
         while s[end] != s[start]:
             start += 1
-
+        # while出来是满足条件的，记录答案
         cur_lens = end - start + 1
         if cur_lens > max_lens:
             res = s[start]
